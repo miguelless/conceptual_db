@@ -1,1 +1,72 @@
-<mxfile host="app.diagrams.net" modified="2022-03-14T20:18:57.625Z" agent="5.0 (X11)" version="17.1.2" etag="_LU3p-q9MYTWqpMQXEdu" type="github"><diagram id="kL8Sb0R0hO_TgQXPaD5R">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-14T20:28:55.911Z" agent="5.0 (X11)" etag="Fv0sMv_OM55a1tzEnM75" version="17.1.2" type="github">
+  <diagram id="kL8Sb0R0hO_TgQXPaD5R" name="Página-1">
+    <mxGraphModel dx="914" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-1" value="libros" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-2" value="id_isbn    int,&#xa;titulo        varchar&#xa;paginas    int,&#xa;id_autor    int,&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="nrrd4vWNbyV3xY3gVsS3-1">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-4" value="detalle_autor" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-5" value="    id_autor                   serial,&#xa;    nombre_autor          varchar,&#xa;    apellido_autor          varchar,&#xa;    fecha_nacimiento     date, &#xa;    fecha_muerte           date,&#xa;    tipo_autor                 varchar," style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=0" vertex="1" parent="nrrd4vWNbyV3xY3gVsS3-4">
+          <mxGeometry y="30" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-6" value="prestamo" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="270" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-7" value="    id_prestamo                     int,&#xa;    id_isbn                             int,&#xa;    id_socio                           int,&#xa;    id_historial_prestamo      int," style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=0" vertex="1" parent="nrrd4vWNbyV3xY3gVsS3-6">
+          <mxGeometry y="30" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-8" value="historial_prestamo" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="480" width="270" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-9" value="    id                                                 int&#xa;    id_prestamo                                int&#xa;    socio                                           varchar&#xa;    libro                                            varchar&#xa;    fecha_prestamo                         date&#xa;    fecha_devolución                       date&#xa;    fecha_real_devolución               date" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=0" vertex="1" parent="nrrd4vWNbyV3xY3gVsS3-8">
+          <mxGeometry y="30" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-10" value="socios" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="470" y="470" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-11" value="    rut                         int,&#xa;    nombre                 varchar(30),&#xa;    apellido                 varchar(30),&#xa;    dirección               varchar(30)  unique,&#xa;    teléfono                 int unique," style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontStyle=0" vertex="1" parent="nrrd4vWNbyV3xY3gVsS3-10">
+          <mxGeometry y="30" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="nrrd4vWNbyV3xY3gVsS3-2" target="nrrd4vWNbyV3xY3gVsS3-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="230" as="sourcePoint" />
+            <mxPoint x="310" y="180" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="nrrd4vWNbyV3xY3gVsS3-9" target="nrrd4vWNbyV3xY3gVsS3-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="540.5000000000001" as="sourcePoint" />
+            <mxPoint x="450" y="550.5000000000001" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.535;exitY=-0.001;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="nrrd4vWNbyV3xY3gVsS3-8" target="nrrd4vWNbyV3xY3gVsS3-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="552.5" as="sourcePoint" />
+            <mxPoint x="480" y="565.2358490566037" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nrrd4vWNbyV3xY3gVsS3-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.933;exitY=-0.014;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="nrrd4vWNbyV3xY3gVsS3-8" target="nrrd4vWNbyV3xY3gVsS3-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="204.45000000000005" y="489.8399999999999" as="sourcePoint" />
+            <mxPoint x="205" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
